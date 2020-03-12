@@ -1,4 +1,10 @@
 class ProductsController < ApplicationController
+  
+  def api
+    products = Product.all
+    render json: products
+  end
+
   def index
     @products = Product.all
   end
