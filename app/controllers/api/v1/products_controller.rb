@@ -1,6 +1,6 @@
-class ApisController < ApplicationController
+class Api::V1::ProductsController < ApplicationController
   
-  def api
+  def index
     products = Product.all
     render json: products, status: 200
   end
